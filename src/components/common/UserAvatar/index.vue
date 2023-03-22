@@ -4,9 +4,7 @@ import { NAvatar } from 'naive-ui'
 import { useUserStore } from '@/store'
 import defaultAvatar from '@/assets/avatar.jpg'
 import { isString } from '@/utils/is'
-
 const userStore = useUserStore()
-
 const userInfo = computed(() => userStore.userInfo)
 </script>
 
@@ -25,15 +23,9 @@ const userInfo = computed(() => userStore.userInfo)
         <NAvatar size="large" round :src="defaultAvatar" />
       </template>
     </div>
-<<<<<<< HEAD
-    <div class="ml-2">
-      <h2 class="font-bold text-md">
-        {{ userInfo.name ?? '郑小鹿' }}
-=======
     <div class="flex-1 min-w-0 ml-2">
       <h2 class="overflow-hidden font-bold text-md text-ellipsis whitespace-nowrap">
-        {{ userInfo.name ?? 'ChenZhaoYu' }}
->>>>>>> upstream/main
+        {{ userInfo.name ?? '郑小鹿' }}
       </h2>
       <p class="overflow-hidden text-xs text-gray-500 text-ellipsis whitespace-nowrap">
         <span
